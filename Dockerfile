@@ -8,16 +8,16 @@ USER node
 RUN mkdir tmp
 
 FROM base AS dependencies
-COPY --chown=user:user ./package.json ./
+COPY --chown=node:node ./package.json ./
 RUN yarn
-COPY --chown=user:user . .
+COPY --chown=node:node . .
 
 FROM dependencies AS build
 RUN yarn build
 
 FROM base AS production
 ENV NODE_ENV production
-COPY --chown=user:user ./api/package.json ./
+COPY --chown=node:node ./api/package.json ./
 RUN yarn --production
-COPY --chown=user:user ./api .
+COPY --chown=node:node ./api .
 CMD [ "yarn", "start" ]
