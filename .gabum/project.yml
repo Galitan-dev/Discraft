@@ -1,0 +1,9 @@
+name: Discraft
+description: Play Minecraft in Discord
+private: false
+license:
+  id: mit
+  name: MIT License
+author: Galitan-dev
+template: ts
+path: /Users/ethan/Documents/Development.nosync/Discraft
