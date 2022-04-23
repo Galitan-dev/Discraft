@@ -17,7 +17,7 @@ RUN yarn build
 
 FROM base AS production
 ENV NODE_ENV production
-COPY --chown=node:node ./api/package.json ./
+COPY --chown=node:node ./package.json ./
 RUN yarn --production
-COPY --chown=node:node ./api .
+COPY --chown=node:node . .
 CMD [ "yarn", "start" ]
