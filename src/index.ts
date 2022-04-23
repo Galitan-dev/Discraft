@@ -1,8 +1,8 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { Bot, Embed } from "discord";
 import { CommandInteraction } from "discord.js";
-import { Game } from "minecraft";
-import config from '../config.json';
+import { Bot, Embed } from "./discord";
+import { Game } from "./minecraft";
+import config from './res/config.json';
 
 const bot = new Bot(config);
 
@@ -41,5 +41,3 @@ bot.on('play', async (interaction: CommandInteraction) => {
     embed.on('➡️', () => game.playerX++);
 
 })
-
-new Game();

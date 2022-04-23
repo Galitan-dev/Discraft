@@ -1,5 +1,4 @@
-import { Map } from "minecraft";
-import { Block } from "./map";
+import Map, { Block } from "./map";
 
 export default class {
 

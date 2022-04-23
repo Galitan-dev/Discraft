@@ -10,7 +10,7 @@ export default class {
     constructor() {
         const raw = readFileSync(path.resolve(
             __dirname,
-            '../../res/map.txt'
+            '../res/map.txt'
         ), 'utf8');
 
         this.grid = raw.split('\n')

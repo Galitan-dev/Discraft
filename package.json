@@ -1,5 +1,5 @@
 {
-    "name": "Discraft",
+    "name": "discraft",
     "description": "Play Minecraft in Discord",
     "version": "1.0.0",
     "main": "index.js",
@@ -13,7 +13,7 @@
     "bugs": "https://github.com/Galitan-dev/Discraft/issues",
     "homepage": "https://github.com/Galitan-dev/Discraft",
     "scripts": {
-        "build": "tsc && shx cp -r src/res dist/res",
+        "build": "tsc && shx rm -fr dist/res &&shx cp -r src/res dist/res",
         "start": "node dist/index.js",
         "dev": "nodemon",
         "docker": "docker-compose -f docker/docker-compose.yml up -d --build"
